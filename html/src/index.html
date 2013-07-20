@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>FE</title> 
+    <meta name="description" content="">
+    <meta name="robots" content="index, follow">
+    <!--<link rel="stylesheet" href="/css/main.css" >-->
+    <style>
+    body {
+        border:1px solid red;
+        heigth:100%;
+        width:100%;
+        margin:0;
+        padding:0;
+        overflow: hidden;
+    }
+    #preview {
+        border:1px solid blue;
+        height:100%;
+        width:79%;
+        margin:0;
+        padding:0;  
+        display:inline-block;
+        
+    }
+    #tools {
+        border:1px solid green;
+        height:100%;
+        width:20%;
+        margin:0;
+        padding:0;
+        display:inline-block;
+        
+    }
+    </style>
+  </head>
+  <body >
+    <div id="preview">
+        test
+       <!-- <div id="example"></div>-->
+    </div>
+    <div id="tools">
+        test2
+    </div>
+    
+    <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.3.min.js"><\/script>')</script>-->
+    <!--<script src="/socket.io/socket.io.js"></script>-->
+    <script src="/js/main.js" ></script>
+    <script>
+    var sb = new Image();
+    sb.src="/i/test.png";
+    var add = function(elem) {debugger;document.body.appendChild(elem);}
+    //add(sb);
+
+    /*var resize = function(c) {debugger;FE.scaleUpTo(c,1024,1024, add);}
+    var exres = function(c) {debugger;FE.pixelyResize(FE.pixelyResize(c,64,32),800,600,add);}
+    var mos = function(c) {debugger; FE.mosaic(c, 32, 64,add);}
+    var invert = function(c) {debugger; FE.saturate(c, add);}*/
+    var rotate = function(c) {debugger; FE.rotateRight(c, add);}
+    var batch = function(c) {/*resize(c);exres(c);mos(c);invert(c);*/rotate(c);}
+    console.log(FE);
+    //FE.byImage(sb, batch);
+    window.onload = function () { document.body.style.height=document.height+'px'; }
+    window.onresize = function () { document.body.style.height=document.height+'px'; }
+    console.log(window);
+    console.log(document);
+    console.log(document.body);
+  
+  
+
+    </script>
+  </body> 
+</html>

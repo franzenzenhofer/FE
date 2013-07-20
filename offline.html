@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>FE</title> 
+    <meta name="description" content="">
+    <meta name="robots" content="index, follow">
+    <link rel="stylesheet" href="public/css/main.css" >
+  </head>
+  <body>
+    <h1>FE</h1>
+    <p id="example"></p>
+    <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.3.min.js"><\/script>')</script>-->
+    <!--<script src="/socket.io/socket.io.js"></script>-->
+    <script src="./public/js/main.js" ></script>
+    <script>
+    var sb = new Image();
+    sb.src="./public/i/test.png";
+    var add = function(elem) {debugger;document.body.appendChild(elem);}
+    add(sb);
+    debugger;
+    var resize = function(c) {debugger;FE.scaleUpTo(c,1024,1024, add);}
+    var exres = function(c) {debugger;FE.pixelyResize(FE.pixelyResize(c,64,32),800,600,add);}
+    var mos = function(c) {debugger; FE.mosaic(c, 32, 64,add);}
+    var invert = function(c) {debugger; FE.invert(c, 0, add);}
+    var invert2 = function(c) {debugger; FE.invert(c, 1, add);}
+    var invert3 = function(c) {debugger; FE.invert(c, 0.2, add);}
+    var batch = function(c) {resize(c);exres(c);mos(c);invert(c);invert2(c);invert3(c);}
+    console.log(FE);
+    FE.byImage(sb, batch);
+    debugger;
+  
+
+    </script>
+  </body> 
+</html>

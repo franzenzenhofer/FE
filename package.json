@@ -1,0 +1,52 @@
+{
+  "name": "franze",
+  "version": "0.0.1",
+  "description": "bare bones and throughly commented html5 canvas image edit lib and interface",
+  "homepage": "https://github.com/franzenzenhofer/franze",
+  "main": "index.html",
+  "dependencies": {
+    "grunt": "0.4.1",
+    "express": "3.1.0"
+  },
+  "devDependencies": {
+    "grunt": "0.4.1",
+    "coffee-script": "1.4.0",
+    "grunt-contrib-uglify": "~0.1.1",
+    "grunt-contrib-concat": "~0.1.2",
+    "grunt-contrib-watch": "~0.2.0",
+    "grunt-contrib-coffee": "~0.4.0",
+    "grunt-contrib-jshint": "~0.1.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/franzenzenhofer/franze"
+  },
+  "keywords": [
+    "coffeescript",
+    "image",
+    "coffee-script"
+  ],
+  "buildfiles": [
+    "js/temp/main.js"
+  ],
+  "coffeesrc": [
+    "js/coffee/globals.coffee",
+    "js/coffee/privatehelper.coffee",
+    "js/coffee/helper.coffee",
+    "js/coffee/resize.coffee",
+    "js/coffee/rotate.coffee",
+    "js/coffee/rgbafilters.coffee",
+    "js/coffee/main.coffee"
+  ],
+  "buildto": "js/lib/main.js",
+  "buildmin": "js/lib/main.min.js",
+  "coffetemp": "js/temp/main.coffee",
+  "temp": "js/temp",
+  "coffeedest": "js/temp/main.js",
+  "author": "franz enzenhofer",
+  "license": "MIT",
+  "readmeFilename": "README.md"
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>FE sliding</title> 
+    <meta name="description" content="">
+    <meta name="robots" content="index, follow">
+    <link rel="stylesheet" href="public/css/main.css" >
+  </head>
+  <body>
+    <h1>FE</h1>
+    <p id="example"></p>
+    <script src="./public/js/main.js" ></script>
+    <script>
+    var sb = new Image();
+    sb.src="./public/i/test.png";
+    var add = function(elem) {debugger;document.body.appendChild(elem);}
+    //add(sb);
+ 
+    //var invert = function(c, p=1) {FE.invert(c, p, add);}
+    var init = function(c) {
+        add(c);
+        ic = FE.invert(c,0.5)
+        add(ic);
+    }
+    FE.byImage(sb,init);
+    
+  
+
+    </script>
+  </body> 
+</html>
