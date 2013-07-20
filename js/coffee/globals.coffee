@@ -8,7 +8,7 @@ root = window or module?.exports or @
 root.FE = FE
 
 #global debug flag
-_DEBUG_ = true
+_DEBUG_ = false
 
 #timout in ms for pseudo non blocking
 MS_PSEUDO_NONBLOCKING = 0

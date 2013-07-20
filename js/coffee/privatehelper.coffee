@@ -71,7 +71,7 @@ lff = (params,defaults...) ->
   #debugger
   i = params.length - 1
   while i >= 0
-    console.log('hiho'+i)
+    #console.log('hiho'+i)
     #debugger;
     par = params[i]
     if isFunction(par) and not last_func
@@ -94,9 +94,9 @@ lff = (params,defaults...) ->
   p2.unshift(last_func)
 
   return p2
-console.log('lff now')
-console.log(lff([0,1,2,3,4,5,(()->),6]))
-console.log('lff now 2')
+#console.log('lff now')
+#console.log(lff([0,1,2,3,4,5,(()->),6]))
+#console.log('lff now 2')
 
 #optionalParameterDefaults 
 #gives optional parameters a default value

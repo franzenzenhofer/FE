@@ -8,7 +8,7 @@
 
   root.FE = FE;
 
-  _DEBUG_ = true;
+  _DEBUG_ = false;
 
   MS_PSEUDO_NONBLOCKING = 0;
 
@@ -73,7 +73,6 @@
     i = 0;
     i = params.length - 1;
     while (i >= 0) {
-      console.log('hiho' + i);
       par = params[i];
       if (isFunction(par) && !last_func) {
         last_func = par;
@@ -96,12 +95,6 @@
     p2.unshift(last_func);
     return p2;
   };
-
-  console.log('lff now');
-
-  console.log(lff([0, 1, 2, 3, 4, 5, (function() {}), 6]));
-
-  console.log('lff now 2');
 
   opd = function() {
     var defaults, i, par, params, r, _fn, _i, _len;

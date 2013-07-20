@@ -1,4 +1,4 @@
-/*! franze - v0.0.1 - last build: 2013-07-20 21:56:33 */
+/*! franze - v0.0.1 - last build: 2013-07-20 22:15:50 */
 (function() {
   var DEFAULT_HEIGHT, DEFAULT_WIDTH, FE, MS_PSEUDO_NONBLOCKING, cbr, derror, dlog, fe_clamp, fe_getGrayscaleValue, fe_getSyncGrayscaleValue, fe_pos, fe_rgba, isFunction, lff, nb, opd, root, _DEBUG_, _defaultCallback,
     __slice = [].slice;
@@ -9,7 +9,7 @@
 
   root.FE = FE;
 
-  _DEBUG_ = true;
+  _DEBUG_ = false;
 
   MS_PSEUDO_NONBLOCKING = 0;
 
@@ -74,7 +74,6 @@
     i = 0;
     i = params.length - 1;
     while (i >= 0) {
-      console.log('hiho' + i);
       par = params[i];
       if (isFunction(par) && !last_func) {
         last_func = par;
@@ -97,12 +96,6 @@
     p2.unshift(last_func);
     return p2;
   };
-
-  console.log('lff now');
-
-  console.log(lff([0, 1, 2, 3, 4, 5, (function() {}), 6]));
-
-  console.log('lff now 2');
 
   opd = function() {
     var defaults, i, par, params, r, _fn, _i, _len;

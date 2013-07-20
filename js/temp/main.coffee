@@ -1,4 +1,4 @@
-# /*! franze - v0.0.1 - last build: 2013-07-20 21:56:33 */
+# /*! franze - v0.0.1 - last build: 2013-07-20 22:15:50 */
 #global object that will be the interface to the functions
 FE = {}
 
@@ -9,7 +9,7 @@ root = window or module?.exports or @
 root.FE = FE
 
 #global debug flag
-_DEBUG_ = true
+_DEBUG_ = false
 
 #timout in ms for pseudo non blocking
 MS_PSEUDO_NONBLOCKING = 0
@@ -96,7 +96,7 @@ lff = (params,defaults...) ->
   #debugger
   i = params.length - 1
   while i >= 0
-    console.log('hiho'+i)
+    #console.log('hiho'+i)
     #debugger;
     par = params[i]
     if isFunction(par) and not last_func
@@ -119,9 +119,9 @@ lff = (params,defaults...) ->
   p2.unshift(last_func)
 
   return p2
-console.log('lff now')
-console.log(lff([0,1,2,3,4,5,(()->),6]))
-console.log('lff now 2')
+#console.log('lff now')
+#console.log(lff([0,1,2,3,4,5,(()->),6]))
+#console.log('lff now 2')
 
 #optionalParameterDefaults 
 #gives optional parameters a default value
